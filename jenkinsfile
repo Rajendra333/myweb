@@ -1,0 +1,18 @@
+pipeline {
+	agent: any
+	stages {
+		stage('clone'){
+			steps{
+			url: https://github.com/Rajendra333/myweb.git
+			}
+		}
+		stage('build') {
+			steps{
+				bat 'mvn clean package'
+			}
+
+
+		}
+	}
+
+}
